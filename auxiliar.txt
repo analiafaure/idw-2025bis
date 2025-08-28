@@ -1,0 +1,33 @@
+margin: 0 0 10px 0;
+    0 → margen arriba (top)
+    0 → margen derecha (right)
+    10px → margen abajo (bottom)
+    0 → margen izquierda (left)     
+
+padding: 0;
+Quita todo el espacio interno del elemento: El contenido queda pegado al borde del elemento.
+
+Diferencia entre "margin" y "padding":
+Margin: espacio fuera del borde del elemento.
+Padding: espacio dentro del borde, antes del contenido.
+
+Valore de display:
+div {
+  display: block;
+}
+
+span {
+  display: inline; ->Elemento pequeño, se acomoda junto a otros.
+}
+
+img {
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+}
+
+section {
+  display: grid;
+}

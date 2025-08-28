@@ -2,7 +2,7 @@
 body {
   font-family: 'Segoe UI', Arial, sans-serif; /* Fuente moderna y legible */
   background: #f5f8fa; /* Color de fondo claro */
-  margin: 0; /* Elimina el espacio por defecto */
+  margin: 0; /* Elimina margen exterior que el navegador pone por defecto alrededor del contenido de la página*/
   color: #333; /* Color de texto principal */
 }
 
@@ -17,18 +17,18 @@ header {
 
 /* Título del encabezado */
 header h1 {
-  margin: 0 0 10px 0; /* Sin margen arriba, margen abajo */
+  margin: 0 0 10px 0; /* Sin margen arriba, a la derecha y a la izquierda, margen abajo */
   font-size: 2em; /* Tamaño grande de fuente */
 }
 
 /* Menú de navegación */
 nav ul {
   list-style: none; /* Quita los puntos de la lista */
-  padding: 0;
+  padding: 0; /* es el espacio dentro de un elemento, entre su borde y su contenido (por ejemplo, el texto)*/
   margin: 0 0 5px 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: flex; /* convierte el elemente en un contenedor flexible y permite org sus hijos, ej alinearlos*/
+  justify-content: center; /* alinear los elem hijos horizontales- solo funciona en contenedores flex*/
+  gap: 20px; /* dejar espacio entre los elementos hijos de un contenedor que tiene display: flex; o display: grid;*/
 }
 
 nav ul li {
@@ -36,74 +36,83 @@ nav ul li {
 }
 
 nav ul a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: text-decoration 0.2s, color 0.2s;
-}
+  color: #fff; /* Color del texto del enlace: blanco */
+  text-decoration: none; /* Elimina el subrayado típico de los enlaces */
+  font-weight: 500; /* Pone el texto del enlace un poco más grueso */
+  transition: text-decoration 0.2s, color 0.2s; /* Hace que los cambios en 'text-decoration' y 'color' sean suaves (animados) en 0.2 segundos */
+}/*primiedad que se va a animar, duración de la animación, tipo de animación (opcional), retraso (opcional)*/
 
 nav ul a:hover {
-  text-decoration: underline;
-  color: #e0f3ff;
+  text-decoration: underline; /* Cuando el mouse pasa por encima del enlace, se agrega el subrayado al texto */
+  color: #e0f3ff; /* Además, el color del texto del enlace cambia a un celeste claro (#e0f3ff) */
 }
 
 /* Área principal de la página */
 main {
-  max-width: 700px;
-  margin: 40px auto 0 auto;
-  padding: 0 15px;
+  max-width: 700px;/* Limita el ancho máximo del área principal a 700px. */
+  margin: 40px auto 0 auto;/* Centra el área principal horizontalmente y agrega 40px de margen arriba. */
+  padding: 0 15px;/* Agrega 15px de espacio interno a la izquierda y derecha. */
+  
 }
-
 /* Sección principal */
 section {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding: 30px 20px;
-  margin-bottom: 30px;
+  background: #fff;/* Fondo blanco para las secciones. */
+  border-radius: 8px;/* Bordes redondeados de 8px. */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);/* Sombra suave debajo de la sección. */
+  padding: 30px 20px;/* Espaciado interno de 30px arriba y abajo, 20px a los lados. */
+  margin-bottom: 30px;/* Espacio inferior de 30px para separar cada sección de la siguiente. */
 }
 
 section h2 {
-  margin-top: 0;
-  color: #007bb5;
-  font-size: 1.5em;
-  margin-bottom: 18px;
+  margin-top: 0;/* Elimina el margen superior del título. */
+  color: #007bb5;/* Color azul para el título. */
+  font-size: 1.5em;/* Tamaño de fuente grande (1.5 veces el tamaño base). */
+  margin-bottom: 18px;/* Espacio inferior de 18px debajo del título. */
 }
 
 /* Lista de obras sociales */
 .obras-sociales {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 15px 0;
+  display: flex;/* Usa flexbox para organizar los ítems en fila y permitir que se acomoden en varias líneas. */
+  flex-wrap: wrap;/* Permite que los ítems pasen a la siguiente línea si no hay espacio. */
+  gap: 10px;/* Espacio de 10px entre cada ítem. */
+  list-style: none;/* Quita los puntos de la lista. */
+  padding: 0;/* Elimina el espacio interno de la lista. */
+  margin: 0 0 15px 0;/* Quita el margen superior, deja solo 15px abajo. */ 
 }
 
 .obras-sociales li {
-  background: #f0f7fb;
-  border: 1px solid #cde6ef;
-  border-radius: 5px;
-  padding: 6px 12px;
-  color: #007bb5;
-  font-weight: 500;
+  background: #f0f7fb;/* Fondo celeste muy claro para cada obra social. */
+  border: 1px solid #cde6ef;/* Borde celeste más oscuro alrededor de cada ítem. */
+  border-radius: 5px; /* Bordes redondeados de 5px. */
+  padding: 6px 12px;/* Espaciado interno de 6px arriba/abajo, 12px a los lados. */
+  color: #007bb5;  /* Texto azul para el nombre de la obra social. */
+  font-weight: 500;/* El texto se ve un poco más grueso. */
 }
 
 /* Contenedor de profesionales */
 .profesionales {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;/* Permite que los ítems pasen a la siguiente línea si no hay espacio. */
   gap: 25px;
 }
 
 /* Tarjeta de cada profesional */
 .profesionales > div {
   background: #f0f7fb;
-  border: 1px solid #cde6ef;
+  border: 1px solid #cde6ef;/* Borde celeste más oscuro alrededor de la tarjeta. */
+  /* Bordes redondeados de 6px. */
   border-radius: 6px;
+
+  /* Espaciado interno de 18px arriba/abajo, 22px a los lados. */
   padding: 18px 22px;
+
+  /* Ancho mínimo de 220px para cada tarjeta. */
   min-width: 220px;
+
+  /* Permite que cada tarjeta ocupe al menos 220px y se expanda si hay espacio. */
   flex: 1 1 220px;
+
+  /* Incluye el borde y el padding en el cálculo del ancho. */
   box-sizing: border-box;
 }
 
@@ -121,29 +130,29 @@ section h2 {
 
 /* Nombre del profesional */
 .profesionales h3 {
-  margin-top: 0;
-  color: #006093;
-  font-size: 1.1em;
+  margin-top: 0;            /* Elimina el margen superior del título */
+  color: #006093;           /* Color azul oscuro para el texto del título */
+  font-size: 1.1em;         /* Tamaño de fuente ligeramente mayor al normal */
 }
 
 /* Ejemplo de selector de clase para un párrafo */
 .nota {
-  color: #007bb5;
-  font-weight: bold;
-  background: #e3f2fd;
-  padding: 8px;
-  border-radius: 6px;
-  text-align: center;
-  margin-top: 10px;
+  color: #007bb5;           /* Color azul para el texto */
+  font-weight: bold;        /* Texto en negrita */
+  background: #e3f2fd;      /* Fondo celeste muy claro */
+  padding: 8px;             /* Espacio interno de 8px en todos los lados */
+  border-radius: 6px;       /* Bordes redondeados de 6px */
+  text-align: center;       /* Centra el texto dentro del párrafo */
+  margin-top: 10px;         /* Espacio superior de 10px */
 }
 
 /* Pie de página */
 footer {
-  background: #e9eef2;
-  padding: 18px 0;
-  text-align: center;
-  color: #555;
-  margin-top: 40px;
-  font-size: 0.95em;
-  border-top: 1px solid #cde6ef;
+  background: #e9eef2;      /* Fondo gris muy claro */
+  padding: 18px 0;          /* Espacio interno arriba y abajo de 18px, a los lados 0 */
+  text-align: center;       /* Centra el texto del pie de página */
+  color: #555;              /* Color gris medio para el texto */
+  margin-top: 40px;         /* Espacio superior de 40px */
+  font-size: 0.95em;        /* Tamaño de fuente un poco menor al normal */
+  border-top: 1px solid #cde6ef; /* Línea superior celeste para separar el pie */
 }
