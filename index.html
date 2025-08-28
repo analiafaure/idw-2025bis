@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>IDW S.A. - Reserva de Turnos Médicos</title>
-  <link rel="stylesheet" href="css/estilo.css"> <!--rel significa "relationship" (relación).
-stylesheet significa "hoja de estilos".-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDW S.A</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
   <header>
-    <h1>Reserva de Turnos Médicos - IDW S.A.</h1>
-    <ul>
-      <li><a href="#">Institución</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </header>
+    <h1>Centro Médico - IDW S.A</h1>
+    <nav>
+        <ul>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="institucional.html">Institucional</a></li>
+        </ul>
+    </nav>
+  </header>  
   <main>
     <section>
-      <h2>Catálogo de Médicos</h2>
-      <div>
-        <!-- Ejemplo de clase: resaltamos este médico -->
-        <div class="resaltado">
-          <h3>Dr. Juan Pérez</h3>
-          <p>Especialidad: Cardiología</p>
-          <p>Obras Sociales: OSDE, Swiss Medical</p>
-        </div>
-        <div>
-          <h3>Dra. María García</h3>
-          <p>Especialidad: Pediatría</p>
-          <p>Obras Sociales: Medicus, Galeno</p>
-        </div>
-        <!-- Ejemplo de id: único para este médico -->
-        <div id="traumatologo">
-          <h3>Dr. Pablo López</h3>
-          <p>Especialidad: Traumatología</p>
-          <p>Obras Sociales: OSDE, IOMA, PAMI</p>
-        </div>
-      </div>
+        <h2>Obras Sociales</h2>
+        <ul class="obras-sociales">
+            <li>OSDE</li>
+            <li>Swiss Medical</li>
+            <li>Medicus</li>
+            <li>Galeno</li>
+            <li>IOMA</li>
+            <li>PAMI</li>
+        </ul>
     </section>
-    <!-- Ejemplo de uso de clase en un párrafo -->
-    <p class="nota">Esta es una nota especial para la clase: el primer médico tiene una clase, el último tiene un id.</p>
-    <!-- Ejemplo de uso de id en un párrafo -->
-    <p id="mensaje-importante">Este mensaje tiene un id único y puede tener un estilo diferente.</p>
+    <section>
+        <h2>Profesionales con los que contamos</h2>
+        <div class="profesionales">
+            <div class="resaltado">
+                <h3>Dra. Fulana</h3>
+                <p>Especialidad: Cardiología</p>
+                <p>Obra Social: OSDE, Swiss Medical</p>
+            </div>
+            <div>
+                <h3>Dr. Juan</h3>
+                <p>Especialidad: Cardiología</p>
+                <p>Obra Social: Medicus, Galeno</p>
+            </div>
+            <div id="doctor-especial">
+                <h3>Dra. Mengana</h3>
+                <p>Especialidad: Pediatría</p>
+                <p>Obra Social: IOMA, PAMI</p>
+            </div>
+        </div>
+    </section>
+    <p class="nota">Ejemplo de clase: la primera profesional está resaltada. Ejemplo de id: el último profesional tiene un id especial.</p>
   </main>
   <footer>
-    <p>&copy; 2025 IDW S.A. - Clínica Médica. Todos los derechos reservados.</p>
+    <p>© 2025 IDW S.A</p>
   </footer>
 </body>
 </html>
