@@ -89,37 +89,44 @@ section h2 {
   font-weight: 500;/* El texto se ve un poco más grueso. */
 }
 
-/* Contenedor de profesionales */
+/* Catálogo: elimina el fondo blanco y bordes para que ocupe todo el ancho */
+section.catalogo {
+  background: none;            /* Sin fondo, hereda el del body */
+  border-radius: 0;            /* Sin bordes redondeados */
+  box-shadow: none;            /* Sin sombra */
+  padding: 0;                  /* Quita el espaciado interno */
+  margin-bottom: 0;            /* Sin margen inferior */
+}
+
+/* Opcional: centra y limita el ancho máximo de la grilla para no ocupar toda la pantalla en monitores grandes */
+section.catalogo .profesionales {
+  max-width: 1000px;           /* Ancho máximo de la grilla */
+  margin: 0 auto 30px auto;    /* Centra la grilla y deja un espacio abajo */
+  padding: 20px 0;             /* Espaciado arriba y abajo dentro de la sección */
+}
+
+/* Grilla de profesionales (tarjetas) */
 .profesionales {
-  display: flex;
-  flex-wrap: wrap;/* Permite que los ítems pasen a la siguiente línea si no hay espacio. */
-  gap: 25px;
+  display: grid;                                       /* Usa CSS Grid */
+  grid-template-columns: repeat(3,1fr);/* 3 columnas, mínimo 220px cada una */
+  gap: 25px;                                           /* Espacio entre las tarjetas */
 }
 
-/* Tarjeta de cada profesional */
+/* Tarjeta individual de profesional */
 .profesionales > div {
-  background: #f0f7fb;
-  border: 1px solid #cde6ef;/* Borde celeste más oscuro alrededor de la tarjeta. */
-  /* Bordes redondeados de 6px. */
-  border-radius: 6px;
-
-  /* Espaciado interno de 18px arriba/abajo, 22px a los lados. */
-  padding: 18px 22px;
-
-  /* Ancho mínimo de 220px para cada tarjeta. */
-  min-width: 220px;
-
-  /* Permite que cada tarjeta ocupe al menos 220px y se expanda si hay espacio. */
-  flex: 1 1 220px;
-
-  /* Incluye el borde y el padding en el cálculo del ancho. */
-  box-sizing: border-box;
+  background: #fff;                                    /* Fondo blanco para cada tarjeta */
+  border: 1px solid #cde6ef;                           /* Borde celeste claro */
+  border-radius: 8px;                                  /* Bordes redondeados */
+  padding: 18px 22px;                                  /* Espaciado interno */
+  box-sizing: border-box;                              /* Incluye el borde y padding en el ancho total */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);              /* Sombra suave para destacar la tarjeta */
 }
 
-/* Ejemplo de selector por clase */
-.resaltado {
-  border: 2px solid #ff9800; /* Borde naranja */
-  background-color: #fff3e0; /* Fondo naranja claro */
+/* Título de cada profesional */
+.profesionales h3 {
+  margin-top: 0;                /* Elimina margen superior */
+  color: #006093;               /* Color azul oscuro */
+  font-size: 1.1em;             /* Tamaño de fuente un poco más grande */
 }
 
 /* Ejemplo de selector por id */
