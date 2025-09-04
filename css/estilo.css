@@ -90,7 +90,7 @@ section h2 {
 }
 
 /* Catálogo: elimina el fondo blanco y bordes para que ocupe todo el ancho */
-section.catalogo {
+.catalogo {
   background: none;            /* Sin fondo, hereda el del body */
   border-radius: 0;            /* Sin bordes redondeados */
   box-shadow: none;            /* Sin sombra */
@@ -99,21 +99,19 @@ section.catalogo {
 }
 
 /* Opcional: centra y limita el ancho máximo de la grilla para no ocupar toda la pantalla en monitores grandes */
-section.catalogo .profesionales {
-  max-width: 1000px;           /* Ancho máximo de la grilla */
-  margin: 0 auto 30px auto;    /* Centra la grilla y deja un espacio abajo */
-  padding: 20px 0;             /* Espaciado arriba y abajo dentro de la sección */
-}
 
 /* Grilla de profesionales (tarjetas) */
 .profesionales {
   display: grid;                                       /* Usa CSS Grid */
   grid-template-columns: repeat(3,1fr);/* 3 columnas, mínimo 220px cada una */
   gap: 25px;                                           /* Espacio entre las tarjetas */
+  max-width: 1000px;           /* Ancho máximo de la grilla */
+  margin: 0 auto 30px auto;    /* Centra la grilla y deja un espacio abajo */
+  padding: 20px 0;             /* Espaciado arriba y abajo dentro de la sección */
 }
 
 /* Tarjeta individual de profesional */
-.profesionales > div {
+.profesionales > div { /*Selecciona todos los elementos <div> que son hijos directos de un elemento con la clase .profesionales*/
   background: #fff;                                    /* Fondo blanco para cada tarjeta */
   border: 1px solid #cde6ef;                           /* Borde celeste claro */
   border-radius: 8px;                                  /* Bordes redondeados */
