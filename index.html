@@ -1,57 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDW S.A</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <!-- Bootstrap CSS CDN: Incluye el CSS de Bootstrap para estilos y componentes -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo CSS personalizado (opcional, tuyo) -->
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
 </head>
+
 <body>
-  <header>
-    <h1>Centro Médico - IDW S.A</h1>
-    <nav>
-        <ul>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="institucional.html">Institucional</a></li>
-        </ul>
-    </nav>
-  </header>  
-  <main>
-    <section>
-        <h2>Obras Sociales</h2>
-        <ul class="obras-sociales">
-            <li>OSDE</li>
-            <li>Swiss Medical</li>
-            <li>Medicus</li>
-            <li>Galeno</li>
-            <li>IOMA</li>
-            <li>PAMI</li>
-        </ul>
-    </section>
-    <section class="catalogo">
-        <h2>Profesionales con los que contamos</h2>
-        <div class="profesionales">
-            <div>
-                <h3>Dra. Fulana</h3>
-                <p>Especialidad: Cardiología</p>
-                <p>Obra Social: OSDE, Swiss Medical</p>
-            </div>
-            <div>
-                <h3>Dr. Juan</h3>
-                <p>Especialidad: Cardiología</p>
-                <p>Obra Social: Medicus, Galeno</p>
-            </div>
-            <div id="doctor-especial">
-                <h3>Dra. Mengana</h3>
-                <p>Especialidad: Pediatría</p>
-                <p>Obra Social: IOMA, PAMI</p>
-            </div>
+  <!-- HEADER con barra de navegación responsive -->
+  <header class="bg-primary text-white py-3 mb-4">
+    <!-- bg-primary: fondo azul Bootstrap, text-white: texto blanco, py-3: padding vertical, mb-4: margin bottom -->
+    <div class="container">
+      <!-- container: centra y da padding horizontal -->
+      <!-- Navbar Bootstrap responsive (se colapsa en móvil, muestra hamburguesa) -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- navbar: barra de navegación Bootstrap
+             navbar-expand-lg: se expande a horizontal en pantallas grandes, colapsa en móviles
+             navbar-dark: estilos claros para fondo oscuro -->
+        <a class="navbar-brand" href="#">IDW S.A</a>
+        <!-- navbar-brand: logo o nombre de la empresa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- navbar-toggler: botón hamburguesa en móvil
+               data-bs-toggle / data-bs-target: activa el colapso del menú -->
+          <span class="navbar-toggler-icon"></span>
+          <!-- Icono hamburguesa -->
+        </button>
+        <div class="collapse navbar-collapse mt-2 mt-lg-0" id="navbarNav">
+          <!-- collapse navbar-collapse: menú colapsable
+               mt-2: pequeño margen arriba en móvil, mt-lg-0: sin margen arriba en desktop -->
+          <ul class="navbar-nav ms-auto">
+            <!-- navbar-nav: lista de links del menú
+                 ms-auto: margen a la izquierda auto, empuja los links a la derecha -->
+            <li class="nav-item">
+              <a href="contacto.html" class="nav-link">Contacto</a>
+              <!-- nav-link: link de navegación Bootstrap -->
+            </li>
+            <li class="nav-item">
+              <a href="institucional.html" class="nav-link">Institucional</a>
+            </li>
+          </ul>
         </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container">
+    <!-- container: centra y da padding horizontal -->
+    <section class="mb-5">
+      <!-- mb-5: margin bottom grande -->
+      <h2 class="mb-3">Obras sociales</h2>
+      <!-- mb-3: margin bottom para separar el título -->
+      <div class="d-flex flex-wrap gap-2 mb-4">
+        <!-- d-flex: display flex, flex-wrap: permite que los botones bajen línea si no entran
+             gap-2: separación entre elementos, mb-4: separación inferior -->
+        <button class="btn btn-outline-primary btn-sm" type="button">OSDE</button>
+        <!-- btn: botón Bootstrap
+             btn-outline-primary: borde azul y texto azul (no fondo lleno)
+             btn-sm: botón pequeño -->
+        <button class="btn btn-outline-primary btn-sm" type="button">Swiss Medical</button>
+        <button class="btn btn-outline-primary btn-sm" type="button">Medicus</button>
+        <button class="btn btn-outline-primary btn-sm" type="button">Galeno</button>
+        <button class="btn btn-outline-primary btn-sm" type="button">IOMA</button>
+      </div>
     </section>
-    <p class="nota">Ejemplo de clase: la primera profesional está resaltada. Ejemplo de id: el último profesional tiene un id especial.</p>
+
+    <!-- Catálogo de profesionales usando cards de Bootstrap -->
+    <section class="catalogo">
+      <h2 class="mb-4">Profesionales con los que contamos</h2>
+      <div class="row g-4">
+        <!-- row: grilla Bootstrap
+             g-4: gap entre columnas y filas -->
+        <!-- Cada profesional ocupa una columna responsive:
+             col-12: ocupa todo el ancho en móvil,
+             col-md-6: ocupa la mitad en tablet,
+             col-lg-4: un tercio en desktop
+             d-flex: hace que las cards tengan mismo alto -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="card w-100">
+            <!-- card: componente visual Bootstrap para contenido destacado
+                 w-100: ancho al 100% de la columna -->
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top" alt="Dra. Fulana">
+            <!-- card-img-top: imagen en la parte superior de la card -->
+            <div class="card-body d-flex flex-column">
+              <!-- card-body: contenido de la card
+                   d-flex flex-column: usa flexbox en columna para que el botón siempre quede abajo -->
+              <h3 class="card-title h5">Dra. Fulana</h3>
+              <!-- card-title: título
+                   h5: tamaño de fuente -->
+              <p class="card-text mb-1">Especialidad: Cardiología</p>
+              <p class="card-text mb-1">Obra Social: OSDE, Swiss Medical</p>
+              <a href="contacto.html" class="btn btn-outline-primary mt-auto">Solicitar Turno</a>
+              <!-- btn: botón Bootstrap
+                   btn-outline-primary: borde azul
+                   mt-auto: empuja el botón abajo dentro de la card -->
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="card w-100">
+            <img src="https://randomuser.me/api/portraits/men/46.jpg" class="card-img-top" alt="Dr. Juan">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Dr. Juan</h3>
+              <p class="card-text mb-1">Especialidad: Clínica Médica</p>
+              <p class="card-text mb-1">Obra Social: IOMA, Galeno</p>
+              <a href="contacto.html" class="btn btn-outline-primary mt-auto">Solicitar Turno</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="card w-100">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="card-img-top" alt="Dra. Mengana">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Dra. Mengana</h3>
+              <p class="card-text mb-1">Especialidad: Pediatría</p>
+              <p class="card-text mb-1">Obra Social: Medicus, OSDE</p>
+              <a href="contacto.html" class="btn btn-outline-primary mt-auto">Solicitar Turno</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="card w-100">
+            <img src="https://randomuser.me/api/portraits/men/77.jpg" class="card-img-top" alt="Dr. Pérez">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Dr. Pérez</h3>
+              <p class="card-text mb-1">Especialidad: Traumatología</p>
+              <p class="card-text mb-1">Obra Social: Swiss Medical, IOMA</p>
+              <a href="contacto.html" class="btn btn-outline-primary mt-auto">Solicitar Turno</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
-    <p>© 2025 IDW S.A</p>
+
+  <!-- FOOTER con estilos Bootstrap -->
+  <footer class="bg-light text-center py-3 mt-5">
+    <!-- bg-light: fondo gris claro
+         text-center: texto centrado
+         py-3: padding vertical, mt-5: margen superior -->
+    <p class="mb-0">© 2025 IDW S.A</p>
+    <!-- mb-0: sin margen inferior en el párrafo -->
   </footer>
+
+  <!-- Bootstrap JS CDN: scripts para componentes interactivos (como el navbar hamburguesa) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

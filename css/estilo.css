@@ -1,163 +1,65 @@
-/* Estilos generales para el cuerpo de la página */
-body {
-  font-family: 'Segoe UI', Arial, sans-serif; /* Fuente moderna y legible */
-  background: #f5f8fa; /* Color de fondo claro */
-  margin: 0; /* Elimina margen exterior que el navegador pone por defecto alrededor del contenido de la página*/
-  color: #333; /* Color de texto principal */
+* {
+    margin: 0;
 }
 
-/* Encabezado principal */
 header {
-  background: #007bb5; /* Fondo azul institucional */
-  color: #fff; /* Letras blancas en el encabezado */
-  padding: 20px 0 10px 0; /* Espaciado arriba y abajo */
-  text-align: center; /* Centra el texto */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06); /* Sombra suave debajo */
+    background-color: #5F9EA0;
 }
 
-/* Título del encabezado */
-header h1 {
-  margin: 0 0 10px 0; /* Sin margen arriba, a la derecha y a la izquierda, margen abajo */
-  font-size: 2em; /* Tamaño grande de fuente */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 2rem;
+    margin: 0 auto;
 }
 
-/* Menú de navegación */
-nav ul {
-  list-style: none; /* Quita los puntos de la lista */
-  padding: 0; /* es el espacio dentro de un elemento, entre su borde y su contenido (por ejemplo, el texto)*/
-  margin: 0 0 5px 0;
-  display: flex; /* convierte el elemente en un contenedor flexible y permite org sus hijos, ej alinearlos*/
-  justify-content: center; /* alinear los elem hijos horizontales- solo funciona en contenedores flex*/
-  gap: 20px; /* dejar espacio entre los elementos hijos de un contenedor que tiene display: flex; o display: grid;*/
+header img.logo {
+    height: 10rem;
 }
 
-nav ul li {
-  display: inline;
+h1 {
+    color: white;
+    font-family: "ABeeZee", sans-serif;
 }
 
-nav ul a {
-  color: #fff; /* Color del texto del enlace: blanco */
-  text-decoration: none; /* Elimina el subrayado típico de los enlaces */
-  font-weight: 500; /* Pone el texto del enlace un poco más grueso */
-  transition: text-decoration 0.2s, color 0.2s; /* Hace que los cambios en 'text-decoration' y 'color' sean suaves (animados) en 0.2 segundos */
-}/*primiedad que se va a animar, duración de la animación, tipo de animación (opcional), retraso (opcional)*/
-
-nav ul a:hover {
-  text-decoration: underline; /* Cuando el mouse pasa por encima del enlace, se agrega el subrayado al texto */
-  color: #e0f3ff; /* Además, el color del texto del enlace cambia a un celeste claro (#e0f3ff) */
+header nav ul {
+    display: flex;
+    justify-self: start;
+    gap: 0.5rem;
 }
 
-/* Área principal de la página */
+header nav ul li {
+    display: block;
+
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #4c8385;
+    border-radius: 6px;
+
+    transition: background-color 1s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #4c8385;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
 main {
-  max-width: 700px;/* Limita el ancho máximo del área principal a 700px. */
-  margin: 40px auto 0 auto;/* Centra el área principal horizontalmente y agrega 40px de margen arriba. */
-  padding: 0 15px;/* Agrega 15px de espacio interno a la izquierda y derecha. */
-  
-}
-/* Sección principal */
-section {
-  background: #fff;/* Fondo blanco para las secciones. */
-  border-radius: 8px;/* Bordes redondeados de 8px. */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);/* Sombra suave debajo de la sección. */
-  padding: 30px 20px;/* Espaciado interno de 30px arriba y abajo, 20px a los lados. */
-  margin-bottom: 30px;/* Espacio inferior de 30px para separar cada sección de la siguiente. */
+    background-color: #e5e5e5;
 }
 
-section h2 {
-  margin-top: 0;/* Elimina el margen superior del título. */
-  color: #007bb5;/* Color azul para el título. */
-  font-size: 1.5em;/* Tamaño de fuente grande (1.5 veces el tamaño base). */
-  margin-bottom: 18px;/* Espacio inferior de 18px debajo del título. */
-}
-
-/* Lista de obras sociales */
-.obras-sociales {
-  display: flex;/* Usa flexbox para organizar los ítems en fila y permitir que se acomoden en varias líneas. */
-  flex-wrap: wrap;/* Permite que los ítems pasen a la siguiente línea si no hay espacio. */
-  gap: 10px;/* Espacio de 10px entre cada ítem. */
-  list-style: none;/* Quita los puntos de la lista. */
-  padding: 0;/* Elimina el espacio interno de la lista. */
-  margin: 0 0 15px 0;/* Quita el margen superior, deja solo 15px abajo. */ 
-}
-
-.obras-sociales li {
-  background: #f0f7fb;/* Fondo celeste muy claro para cada obra social. */
-  border: 1px solid #cde6ef;/* Borde celeste más oscuro alrededor de cada ítem. */
-  border-radius: 5px; /* Bordes redondeados de 5px. */
-  padding: 6px 12px;/* Espaciado interno de 6px arriba/abajo, 12px a los lados. */
-  color: #007bb5;  /* Texto azul para el nombre de la obra social. */
-  font-weight: 500;/* El texto se ve un poco más grueso. */
-}
-
-/* Catálogo: elimina el fondo blanco y bordes para que ocupe todo el ancho */
-.catalogo {
-  background: none;            /* Sin fondo, hereda el del body */
-  border-radius: 0;            /* Sin bordes redondeados */
-  box-shadow: none;            /* Sin sombra */
-  padding: 0;                  /* Quita el espaciado interno */
-  margin-bottom: 0;            /* Sin margen inferior */
-}
-
-/* Opcional: centra y limita el ancho máximo de la grilla para no ocupar toda la pantalla en monitores grandes */
-
-/* Grilla de profesionales (tarjetas) */
-.profesionales {
-  display: grid;                                       /* Usa CSS Grid */
-  grid-template-columns: repeat(3,1fr);/* 3 columnas, mínimo 220px cada una */
-  gap: 25px;                                           /* Espacio entre las tarjetas */
-  max-width: 1000px;           /* Ancho máximo de la grilla */
-  margin: 0 auto 30px auto;    /* Centra la grilla y deja un espacio abajo */
-  padding: 20px 0;             /* Espaciado arriba y abajo dentro de la sección */
-}
-
-/* Tarjeta individual de profesional */
-.profesionales > div { /*Selecciona todos los elementos <div> que son hijos directos de un elemento con la clase .profesionales*/
-  background: #fff;                                    /* Fondo blanco para cada tarjeta */
-  border: 1px solid #cde6ef;                           /* Borde celeste claro */
-  border-radius: 8px;                                  /* Bordes redondeados */
-  padding: 18px 22px;                                  /* Espaciado interno */
-  box-sizing: border-box;                              /* Incluye el borde y padding en el ancho total */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);              /* Sombra suave para destacar la tarjeta */
-}
-
-/* Título de cada profesional */
-.profesionales h3 {
-  margin-top: 0;                /* Elimina margen superior */
-  color: #006093;               /* Color azul oscuro */
-  font-size: 1.1em;             /* Tamaño de fuente un poco más grande */
-}
-
-/* Ejemplo de selector por id */
-#doctor-especial {
-  border: 2px solid #4caf50; /* Borde verde */
-  background-color: #e8f5e9; /* Fondo verde claro */
-}
-
-/* Nombre del profesional */
-.profesionales h3 {
-  margin-top: 0;            /* Elimina el margen superior del título */
-  color: #006093;           /* Color azul oscuro para el texto del título */
-  font-size: 1.1em;         /* Tamaño de fuente ligeramente mayor al normal */
-}
-
-/* Ejemplo de selector de clase para un párrafo */
-.nota {
-  color: #007bb5;           /* Color azul para el texto */
-  font-weight: bold;        /* Texto en negrita */
-  background: #e3f2fd;      /* Fondo celeste muy claro */
-  padding: 8px;             /* Espacio interno de 8px en todos los lados */
-  border-radius: 6px;       /* Bordes redondeados de 6px */
-  text-align: center;       /* Centra el texto dentro del párrafo */
-  margin-top: 10px;         /* Espacio superior de 10px */
-}
-
-/* Pie de página */
-footer {
-  background: #e9eef2;      /* Fondo gris muy claro */
-  padding: 18px 0;          /* Espacio interno arriba y abajo de 18px, a los lados 0 */
-  text-align: center;       /* Centra el texto del pie de página */
-  color: #555;              /* Color gris medio para el texto */
-  margin-top: 40px;         /* Espacio superior de 40px */
-  font-size: 0.95em;        /* Tamaño de fuente un poco menor al normal */
-  border-top: 1px solid #cde6ef; /* Línea superior celeste para separar el pie */
+main div.container {
+    background-color: white;
 }

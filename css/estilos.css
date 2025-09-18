@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    margin: 0;   
+    color: #333; 
+}
+
+header {
+    background: #007bb5;
+    color: #fff;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 5px 0;
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display:inline;
+}
+
+nav ul a {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: text-decoration 0.2s, color 0.2s;
+}
+
+nav ul a:hover{
+    text-decoration: underline;
+    color:aqua;
+}
+/* cuerpo de el sitio */
+main {
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    padding: 0 15px;
+}
+section{
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #007bb5;
+    font-size: 1.5em;
+    margin-bottom: 18px;
+}
+
+.obraSocial{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.obraSocial li {
+    background: #007bb5;
+    border: 1px solid #002b3f;
+    border-radius: 5px;
+    padding: 6px 12px;
+    color: #f4f4f4;
+    font-weight: 400;
+}
+.catalogo {
+    background: none;
+    padding: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+    border-radius: 0px;
+}
+.medicos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    padding: 20px 0;
+}
+.medicos > div {
+    background: #fff;
+    border: 1px solid #88cbeb;
+    border-radius: 8px;
+    padding: 18px 22px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.medicos h3 {
+    margin-top: 0;
+    color: #002b3f;
+    font-size: 1.1em;
+}
+
+footer {
+  background: #f5f2f2;     
+  padding: 18px 0;          
+  text-align: center;       
+  color: #555;              
+  margin-top: 40px;         
+  font-size: 0.95em;       
+  border-top: 1px solid #cde6ef; 
+}
